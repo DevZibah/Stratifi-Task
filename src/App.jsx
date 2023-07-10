@@ -3,8 +3,8 @@ import '../src/style/Global.css'
 
 function App() {
   return (
-    <div>
-      <h1 className='text-gray border-1 border-blue sm:p-3'>hello</h1>
+    <div className='font-roboto'>
+      <h1 className='border-1 border-red text-lg font-normal'>hello</h1>
     </div>
   )
 }
