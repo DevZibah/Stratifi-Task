@@ -1,10 +1,16 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import '../src/style/Global.css'
+import Form from './components/Form'
+import ThankYou from './components/ThankYou'
 
 function App() {
   return (
     <div className='font-roboto'>
-      <h1 className='border-1 border-red text-lg font-normal'>hello</h1>
+      <Routes>
+        <Route path='/' element={<Form />} />
+        <Route path='/ThankYou' element={<ThankYou />} />
+      </Routes>
     </div>
   )
 }
