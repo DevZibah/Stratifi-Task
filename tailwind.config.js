@@ -45,9 +45,10 @@ export default {
       },
       borderRadius: {
         none: '0',
-        sm: '.125rem',
-        DEFAULT: '.25rem',
-        lg: '.5rem',
+        sm: '.125rem', //2px
+        DEFAULT: '.25rem', // 4px
+        md: '.375rem', //'6px'
+        lg: '.5rem', //'8px'
         full: '9999px',
       },
     },

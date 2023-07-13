@@ -9,7 +9,7 @@ const Form = () => {
       <div>
         <img src={signupMobile} alt='' />
       </div>
-      <main className='border-solid border-2 border-red sm:p-3 sm:mt-3'>
+      <main className='border border-solid border-red sm:p-3 sm:mt-3'>
         <p className='text-darkSlateGrey font-bold text-3xl'>Stay updated!</p>
         <section className='text-charcoalGrey sm:mt-2 font-normal text-base'>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -32,9 +32,12 @@ const Form = () => {
         </section>
         <section className='text-charcoalGrey text-base sm:mt-3 font-bold'>
           <small>Email address</small>
-          <div className='border-solid border-2 border-black'>
+          <div className='border border-solid border-grey rounded-md sm:p-1'>
             <input type='email' placeholder='email@company.com' />
           </div>
+        </section>
+        <section className='sm:mt-4 border border-solid border-darkSlateGrey sm:p-1 rounded-md bg-darkSlateGrey text-white text-center'>
+          <p>Subscribe to monthly newsletter</p>
         </section>
       </main>
     </section>
