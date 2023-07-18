@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TaskContext } from '../contexts/TaskContext'
 
 const ActiveTasks = () => {
+  const { actives } = useContext(TaskContext)
+
   return (
     <section className='mt-4'>
-      <p>ActiveTasks</p>
+      {actives.map((item, id) => {
+        return (
+          <section className='mt-2'>
+            <div>
+              <p>{item.task}</p>
+            </div>
+          </section>
+        )
+      })}
     </section>
   )
 }

@@ -1,8 +1,12 @@
 import React, { useContext } from 'react'
 import { TaskContext } from '../contexts/TaskContext'
+import Todo from '../components/Todo'
 
 const AllTasks = () => {
-  const { handleChange, task } = useContext(TaskContext)
+  const { task, todoList, handleChange, handleSubmit } = useContext(TaskContext)
+  console.log(task)
+  console.log(todoList)
+
   return (
     <section className='mt-4'>
       <main className='flex gap-2'>
@@ -16,11 +20,25 @@ const AllTasks = () => {
           />
         </div>
         <div>
-          <button className='border border-solid border-blueShade bg-blueShade text-white p-1 button rounded-lg'>
+          <button
+            className='border border-solid border-blueShade bg-blueShade text-white p-1 button rounded-lg'
+            onClick={handleSubmit}
+          >
             Add
           </button>
         </div>
       </main>
+      <article className='mt-3'>
+        {todoList.map((item, id) => {
+          return (
+            <section className='mt-2'>
+              <div>
+                <Todo item={item} id={id}/>
+              </div>
+            </section>
+          )
+        })}
+      </article>
     </section>
   )
 }
