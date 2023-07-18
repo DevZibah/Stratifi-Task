@@ -16,3 +16,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+.button {
+  box-shadow: 0px 2px 6px 0px rgba(127, 177, 243, 0.4);
+  width: 72px;
+}

@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: '365px',
+        sm: '320px',
         // => @media (min-width: 365px) { ... }
 
         md: '768px',
@@ -33,10 +33,8 @@ export default {
       },
       colors: {
         tomato: 'hsl(4, 100%, 67%)',
-        darkSlateGrey: 'hsl(234, 29%, 20%)',
-        charcoalGrey: 'hsl(235, 18%, 26%)',
-        grey: 'hsl(231, 7%, 60%)',
-        white: 'hsl(0, 0%, 100%)',
+        grey: '#BDBDBD',
+        blueShade: '#2F80ED',
         red: 'red',
       },
       fontFamily: {
