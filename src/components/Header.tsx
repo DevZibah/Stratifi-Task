@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <section>
-      <header className='font-bold text-2xl text-center'>#todo</header>
-      <main className='flex justify-around mt-4'>
+      <header className='font-bold text-2xl text-center text-black lg:text-3xl'>#todo</header>
+      <main className='flex justify-evenly mt-4 md:mt-5'>
         <Link to='/'>
           <p>All</p>
         </Link>

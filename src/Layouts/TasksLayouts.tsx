@@ -4,7 +4,7 @@ import Header from '../components/Header'
 
 const TasksLayouts = () => {
   return (
-    <div className='border border-solid border-red font-roboto text-base p-4'>
+    <div className='font-roboto text-base p-4 md:p-20 layout text-black'>
       <Header />
       <Outlet />
     </div>

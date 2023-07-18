@@ -32,10 +32,10 @@ export default {
         6: '48px',
       },
       colors: {
-        tomato: 'hsl(4, 100%, 67%)',
+        tomato: 'hsla(0, 79%, 63%, 1)',
         grey: '#BDBDBD',
         blueShade: '#2F80ED',
-        red: 'red',
+        black: 'hsla(0, 0%, 20%, 1)',
       },
       fontFamily: {
         roboto: ['Roboto'],

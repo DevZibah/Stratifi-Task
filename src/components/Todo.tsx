@@ -5,13 +5,17 @@ const Todo = ({ item, id }) => {
   const { handleChecked } = useContext(TaskContext)
 
   return (
-    <div className='flex gap-2'>
+    <div className='flex gap-1'>
       <input
         type='checkbox'
         onChange={() => handleChecked(id)}
         checked={item.complete}
+        className='cursor-pointer'
       />
-      <p style={{ textDecoration: item.complete ? 'line-through' : 'none' }}>
+      <p
+        className=' lg:text-lg'
+        style={{ textDecoration: item.complete ? 'line-through' : 'none' }}
+      >
         {item.task}
       </p>
     </div>

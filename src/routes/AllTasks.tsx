@@ -9,10 +9,10 @@ const AllTasks = () => {
 
   return (
     <section className='mt-4'>
-      <main className='flex gap-2'>
+      <main className='flex gap-2 md:gap-3'>
         <div>
           <input
-            className='border border-solid border-grey rounded-lg w-60 p-1'
+            className='border border-solid border-grey rounded-lg w-60 p-1 allTasks-input'
             type='text'
             placeholder='add details'
             value={task}
@@ -21,7 +21,7 @@ const AllTasks = () => {
         </div>
         <div>
           <button
-            className='border border-solid border-blueShade bg-blueShade text-white p-1 button rounded-lg'
+            className='border border-solid border-blueShade bg-blueShade text-white p-1 button rounded-lg  allTasks-button'
             onClick={handleSubmit}
           >
             Add
@@ -33,7 +33,7 @@ const AllTasks = () => {
           return (
             <section className='mt-2'>
               <div>
-                <Todo item={item} id={id}/>
+                <Todo item={item} id={id} />
               </div>
             </section>
           )

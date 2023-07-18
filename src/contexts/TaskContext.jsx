@@ -28,6 +28,12 @@ export const TaskContextProvider = ({ children }) => {
     newTodos[id].complete = !newTodos[id].complete
     setTodoList(newTodos)
   }
+  const handleDelete = (id) => {
+    setTodoList([...todoList.slice(0, id), ...todoList.slice(id + 1)])
+  }
+  const handleClearTodos = () => {
+    setTodoList([])
+  }
   const actives = todoList.filter((item) => {
     return item.complete === false
   })
@@ -45,6 +51,8 @@ export const TaskContextProvider = ({ children }) => {
         handleChange,
         handleSubmit,
         handleChecked,
+        handleDelete,
+        handleClearTodos,
       }}
     >
       {children}
