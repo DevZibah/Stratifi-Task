@@ -2,8 +2,14 @@ import React, { useContext } from 'react'
 import { TaskContext } from '../contexts/TaskContext'
 
 const ActiveTasks = () => {
-  const { actives, handleChecked, handleChange, handleSubmit, task } =
-    useContext(TaskContext)
+  const {
+    actives,
+    handleChecked,
+    handleChange,
+    handleSubmit,
+    task,
+    activeChecked,
+  } = useContext(TaskContext)
 
   return (
     <section className='mt-4'>
@@ -26,17 +32,27 @@ const ActiveTasks = () => {
           </button>
         </div>
       </main>
-      {actives.map((item, id) => {
+      {actives.map((active, id) => {
         return (
           <section className='mt-2'>
-            <div className='flex gap-1'>
-              <input
-                type='checkbox'
-                onChange={() => handleChecked(id)}
-                checked={item.complete}
-              />
-              <p>{item.task}</p>
-            </div>
+            {active.task === '' ? (
+              ''
+            ) : (
+              <div
+                className='flex gap-1'
+                data-aos='fade-down'
+                data-aos-offset='200'
+                data-aos-easing='ease-in-sine'
+                data-aos-duration='600'
+              >
+                <input
+                  type='checkbox'
+                  onChange={() => activeChecked(id)}
+                  checked={active.complete}
+                />
+                <p className='lg:text-lg'>{active.task}</p>
+              </div>
+            )}
           </section>
         )
       })}

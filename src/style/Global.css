@@ -33,4 +33,7 @@ body {
     padding: 24rem !important;
     margin-top: -23rem !important;
   }
+  .allTasks-button {
+    width: 105px;
+  }
 }

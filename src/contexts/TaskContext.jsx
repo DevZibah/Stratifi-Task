@@ -3,6 +3,7 @@ import React, { useEffect, createContext, useState } from 'react'
 export const TaskContext = createContext()
 export const TaskContextProvider = ({ children }) => {
   const [todoList, setTodoList] = useState([])
+  const [activeArray, setActiveArray] = useState([])
   const [task, setTask] = useState('')
   const [complete, setComplete] = useState(false)
 
@@ -37,6 +38,11 @@ export const TaskContextProvider = ({ children }) => {
   const actives = todoList.filter((item) => {
     return item.complete === false
   })
+  const activeChecked = (id) => {
+    const newTodos = [...actives]
+    newTodos[id].complete = !newTodos[id].complete
+    setActiveArray(newTodos)
+  }
   const completed = todoList.filter((item) => {
     return item.complete === true
   })
@@ -47,10 +53,12 @@ export const TaskContextProvider = ({ children }) => {
         todoList,
         actives,
         completed,
+        activeArray,
         setComplete,
         handleChange,
         handleSubmit,
         handleChecked,
+        activeChecked,
         handleDelete,
         handleClearTodos,
       }}
